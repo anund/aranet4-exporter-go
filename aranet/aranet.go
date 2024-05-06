@@ -24,7 +24,7 @@ type Aranet struct {
 }
 
 func New(context context.Context, id string, room string) *Aranet {
-	retriever := Retriever{ID: id}
+	retriever := Retriever{context: context, ID: id}
 	acc := NewAranetAccessory(accessory.Info{Name: "Aranet4"})
 	return &Aranet{
 		accessory: acc,
